@@ -13,7 +13,7 @@ public class Titkosito {
 
 		String line = br.readLine();
 		int ascii = 0;
-		char ujkarakter; // tudom, hogy nincs megadva kezdoertek, de kesobb adok neki
+		char ujkarakter; 
 
 		while (line != null) {
 			StringTokenizer st = new StringTokenizer(line);
@@ -26,7 +26,7 @@ public class Titkosito {
 			}
 
 			for (char c : karakter) {
-				ascii = c; // a java tudja kezelni ezt az atalakitast
+				ascii = c; 
 
 				if (ascii != 32) { // a space kodja 32
 					ascii = ascii + 1;
@@ -37,19 +37,7 @@ public class Titkosito {
 				}
 
 			}
-/*	
-			for(int j = 0;j<karakter.length;j++) {
-				ascii=karakter[j];
-				
-				if (ascii != 32) { // a space kodja 32
-					ascii = ascii + 1;
-					ujkarakter = (char) ascii;
-					pw.print(ujkarakter);
-				} else {
-					pw.print(" ");
-				}
-			}
-*/
+
 			pw.print("\n");
 			line = br.readLine();
 		}
